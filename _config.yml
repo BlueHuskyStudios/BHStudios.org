@@ -12,6 +12,12 @@ title: Blue Husky Studios
 # Short bio or description (in share links)
 description: Blue Husky Studios is an indie entertainment brand. We make art, develop software, and review stuff!
 
+brand:
+    name: Blue Husky Studios
+    social:
+        twitter_username: BluHuskyStudios
+        previewImage: https://Shared.BHStudios.org/_img/bg/main-thumbnail.png
+
 authors:
     -
         name: Ben Leggiero

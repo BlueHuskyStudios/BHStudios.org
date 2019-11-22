@@ -1,0 +1,155 @@
+---
+---
+
+:root {
+    --logo-effect-color-1: var(--brand-color-1);
+    --logo-effect-color-2: var(--brand-color-2);
+    --logo-effect-color-3: var(--brand-color-3);
+    --logo-effect-color-4: var(--brand-color-4);
+    --logo-effect-color-5: var(--brand-color-5);
+
+    --light-theme-background-color: #27b;
+    --dark-theme-background-color: #027;
+    --light-theme-foreground-color: var(--dark-theme-foreground-color);
+}
+
+
+
+body {
+    // Get rid of the overscroll on homepage
+    margin: 0;
+}
+
+
+
+.app-bar {
+    background: 0;
+    box-shadow: none;
+    position: fixed;
+
+    &,
+    * {
+        color: var(--theme-foreground-color) !important;
+    }
+}
+
+
+
+svg g[fill="#fff"] {
+    fill: var(--dark-theme-foreground-color);
+}
+
+
+
+.full-viewport-size {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
+
+
+
+#portalList {
+    --button-border-radius: 0.5ex;
+    --button-margin: 1ex;
+    --font-size-large-button: 36px;
+
+    position: relative;
+    z-index: 3;
+
+
+    .button {
+        background: var(--button-text-color);
+        color: var(--button-background);
+    }
+}
+
+
+
+#brand-name {
+    font-size: 11vh;
+    text-align: center;
+    padding: 0.5ex;
+    position: static;
+    z-index: 1;
+
+    --base-offset: 0.4ex;
+    --half-offset: calc(var(--base-offset) / 2);
+    --fg-offset-x: 0px;// calc(0ex - (2 * var(--base-offset)));
+    --fg-offset-y: var(--base-offset);
+    --bg-offset-x: 0px;// calc(var(--fg-offset-x) / 2);
+    --bg-offset-y: calc(var(--fg-offset-y) / 2);
+    --gap-color: var(--theme-background-color);
+
+    transition-property: all;
+    transition-duration: 4s;
+    transition-timing-function: cubic-bezier(.15, 0, 0, 1);
+
+    text-shadow:
+        calc(var(--bg-offset-x) * 1) calc(var(--bg-offset-y) *  1) 0 var(--gap-color), calc(var(--fg-offset-x) * 1) calc(var(--fg-offset-y) *  1) 0 var(--logo-effect-color-1),
+        calc(var(--bg-offset-x) * 3) calc(var(--bg-offset-y) *  2) 0 var(--gap-color), calc(var(--fg-offset-x) * 2) calc(var(--fg-offset-y) *  2) 0 var(--logo-effect-color-2),
+        calc(var(--bg-offset-x) * 5) calc(var(--bg-offset-y) *  4) 0 var(--gap-color), calc(var(--fg-offset-x) * 3) calc(var(--fg-offset-y) *  4) 0 var(--logo-effect-color-3),
+        calc(var(--bg-offset-x) * 7) calc(var(--bg-offset-y) *  8) 0 var(--gap-color), calc(var(--fg-offset-x) * 4) calc(var(--fg-offset-y) *  8) 0 var(--logo-effect-color-4),
+        calc(var(--bg-offset-x) * 9) calc(var(--bg-offset-y) * 16) 0 var(--gap-color), calc(var(--fg-offset-x) * 5) calc(var(--fg-offset-y) * 16) 0 var(--logo-effect-color-5);
+
+    @media(max-aspect-ratio: 1/2) {
+        font-size: 15vw;
+    }
+
+    @media(min-aspect-ratio: 2/1) {
+        font-size: 16vh;
+    }
+
+
+    // TODO: Until Chrome and Firefox support property animations, here's a bodge:
+
+    &.ready-for-shadow-intro {
+        --base-offset: 100vh;
+        --gap-color: transparent;
+
+        &:not(.go-for-shadow-intro) {
+            transition-property: none;
+        }
+
+        &.go-for-shadow-intro {
+            --base-offset: 0vh;
+        }
+    }
+
+
+
+
+    // TODO: When Chrome and Firefox support property animations, use this:
+
+//     animation-name: brandShadowIntro;
+//     animation-delay: 1s;
+//     animation-fill-mode: both;
+//     animation-duration: 3s;
+//     animation-timing-function: cubic-bezier(.15, 0, 0, 1);
+// }
+//
+//
+//
+// @keyframes brandShadowIntro {
+//     from {
+//         transition-property: all;
+//         --gap-color: transparent;
+//         --base-offset: 100vh;
+//     }
+//
+//     80% {
+//         --gap-color: transparent;
+//         --base-offset: 20vh;
+//     }
+//
+//     85% {
+//         --gap-color: var(--theme-background-color);
+//         --base-offset: 15vh;
+//     }
+//
+//     to {
+//         transition-property: all;
+//         --gap-color: var(--theme-background-color);
+//         --base-offset: 0vh;
+//     }
+}
