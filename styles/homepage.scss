@@ -1,6 +1,11 @@
 ---
 ---
 
+@import "variables";
+@import url("/styles/general.css");
+
+
+
 :root {
     --logo-effect-color-1: var(--brand-color-1);
     --logo-effect-color-2: var(--brand-color-2);
@@ -8,9 +13,10 @@
     --logo-effect-color-4: var(--brand-color-4);
     --logo-effect-color-5: var(--brand-color-5);
 
-    --light-theme-background-color: #27b;
-    --dark-theme-background-color: #027;
+    --light-theme-background-color: var(--brand-color-1);
+    --dark-theme-background-color: var(--brand-color-1-dark);
     --light-theme-foreground-color: var(--dark-theme-foreground-color);
+    --intro-animation-duration: {{ site.introAnimationDuration }}s;
 }
 
 
@@ -42,14 +48,28 @@ svg g[fill="#fff"] {
 
 
 .full-viewport-size {
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
+    min-width: 100vw;
     margin: 0;
 }
 
 
 
-#portalList {
+#homepage-background {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    min-width: 100vw;
+    min-height: 100vh;
+    pointer-events: none;
+}
+
+
+
+#portal-list {
     --button-border-radius: 0.5ex;
     --button-margin: 1ex;
     --font-size-large-button: 36px;
@@ -69,7 +89,7 @@ svg g[fill="#fff"] {
 #brand-name {
     font-size: 11vh;
     text-align: center;
-    padding: 0.5ex;
+    padding: var(--app-bar-height-auto) 0.5ex 0.5ex;
     position: static;
     z-index: 1;
 
@@ -82,7 +102,6 @@ svg g[fill="#fff"] {
     --gap-color: var(--theme-background-color);
 
     transition-property: all;
-    transition-duration: 4s;
     transition-timing-function: cubic-bezier(.15, 0, 0, 1);
 
     text-shadow:
@@ -100,19 +119,12 @@ svg g[fill="#fff"] {
         font-size: 16vh;
     }
 
-
-    // TODO: Until Chrome and Firefox support property animations, here's a bodge:
-
-    &.ready-for-shadow-intro {
-        --base-offset: 100vh;
-        --gap-color: transparent;
-
-        &:not(.go-for-shadow-intro) {
-            transition-property: none;
-        }
-
-        &.go-for-shadow-intro {
-            --base-offset: 0vh;
+    @at-root
+    .ready-for-intro-animation:not(.go-for-intro-animation) {
+        @include has-intro-animation {
+            &#brand-name {
+                transition-duration: 0s !important;
+            }
         }
     }
 
@@ -152,4 +164,53 @@ svg g[fill="#fff"] {
 //         --gap-color: var(--theme-background-color);
 //         --base-offset: 0vh;
 //     }
+}
+
+
+// TODO: Until Chrome and Firefox support property animations, here's a bodge:
+
+.ready-for-intro-animation {
+
+    &.go-for-intro-animation {
+        @include has-intro-animation {
+            transition-duration: var(--intro-animation-duration) !important;
+        }
+    }
+
+    .has-slide-in-from-bottom-left-animation {
+        transition-property: transform;
+        transition-duration: calc(var(--intro-animation-duration) * 0.75) !important;
+
+        @at-root
+        .ready-for-intro-animation:not(.go-for-intro-animation):not(.intro-animation-complete) .has-slide-in-from-bottom-left-animation {
+            transition-property: none;
+            transform: translate(-260vmax, 150vmax);
+        }
+
+        @at-root
+        .ready-for-intro-animation.go-for-intro-animation .has-slide-in-from-bottom-left-animation {
+            --base-offset: 0vh !important;
+        }
+    }
+
+    .has-shadow-intro-animation {
+        --base-offset: 100vh !important;
+        --gap-color: transparent !important;
+
+        @at-root
+        .ready-for-intro-animation:not(.go-for-intro-animation) .has-shadow-intro-animation {
+            transition-property: color, font-size;
+
+            --logo-effect-color-1: var(--theme-background-color);
+            --logo-effect-color-2: var(--theme-background-color);
+            --logo-effect-color-3: var(--theme-background-color);
+            --logo-effect-color-4: var(--theme-background-color);
+            --logo-effect-color-5: var(--theme-background-color);
+        }
+
+        @at-root
+        .ready-for-intro-animation.go-for-intro-animation .has-shadow-intro-animation {
+            --base-offset: 0vh !important;
+        }
+    }
 }

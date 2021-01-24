@@ -8,23 +8,24 @@
 	xmlns:xlink="http://www.w3.org/1999/xlink"
 	viewBox="0 0 1080 1080"
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
-	style="position: fixed; z-index: 2; top: 0; left: 0; height: 100vh; width: 100vw; min-width: 100vw; min-height: 100vh;"
+    id="homepage-background"
+    class="has-slide-in-from-bottom-left-animation"
 	>
 	<defs>
 		<linearGradient id="Digital_Blue" osb:paint="solid">
-			<stop stop-color="#27b" offset="0"></stop>
+			<stop stop-color="var(--brand-color-1)" offset="0"></stop>
 		</linearGradient>
 		<linearGradient id="Magical_Purple" osb:paint="solid">
-			<stop stop-color="#72b" offset="0"></stop>
+			<stop stop-color="var(--brand-color-2)" offset="0"></stop>
 		</linearGradient>
 		<linearGradient id="Silly_Magenta" osb:paint="solid">
-			<stop stop-color="#b27" offset="0"></stop>
+			<stop stop-color="var(--brand-color-3)" offset="0"></stop>
 		</linearGradient>
 		<linearGradient id="Not_Green" osb:paint="solid">
-			<stop stop-color="#2b7" offset="0"></stop>
+			<stop stop-color="var(--brand-color-4)" offset="0"></stop>
 		</linearGradient>
 		<linearGradient id="Hardly-Working_Orange" osb:paint="solid">
-			<stop stop-color="#b72" offset="0"></stop>
+			<stop stop-color="var(--brand-color-5)" offset="0"></stop>
 		</linearGradient>
 	</defs>
 	<metadata>

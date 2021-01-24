@@ -17,3 +17,19 @@ layout: default
 {%- endfor -%}
 {{ site.pages.homepage-backgorund.content }}
 {{ content }}
+
+
+
+
+
+<script>
+$(_ => {
+	const readyForIntroElements = $(".ready-for-intro-animation")
+    readyForIntroElements.addClass("go-for-intro-animation")
+    setTimeout(() => {
+        readyForIntroElements
+            .removeClass("go-for-intro-animation")
+            .addClass("intro-animation-complete")
+    }, {{ site.introAnimationDuration }} * 1000)
+})
+</script>

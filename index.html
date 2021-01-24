@@ -2,21 +2,19 @@
 layout: homepage
 pageSpecificStylesheetUrls:
     - /styles/homepage.css
+htmlClasses: brightness-dark
 ---
 
+<script>
+$("html").addClass("ready-for-intro-animation")
+</script>
+
 <article class="full-viewport-size   flex-column flex-vert-space-around flex-horiz-center">
-	<h1 id="brand-name" class="ready-for-shadow-intro">{{ site.brand.name }}</h1>
-	<ul id="portalList" class="plain   flex-row flex-horiz-center flex-wrap   font-2x">
+	<h1 id="brand-name" class="has-shadow-intro-animation">{{ site.brand.name }}</h1>
+	<ul id="portal-list" class="plain   flex-row flex-horiz-center flex-wrap   font-2x">
 		<li><a href="//Meta.BHStudios.org"          id="aboutButton"    class="big button display-inline-block">About</a></li>
 		<li><a href="//Software.BHStudios.org"      id="softwareButton" class="big button display-inline-block">Software</a></li>
 		<li><a href="//Research.BHStudios.org"      id="researchButton" class="big button display-inline-block">Research</a></li>
 		<li><a href="//Meta.BHStudios.org/contact/" id="contactButton"  class="big button display-inline-block">Contact</a></li>
 	</ul>
 </article>
-
-
-<script>
-$(_ => {
-	$(".ready-for-shadow-intro").addClass("go-for-shadow-intro")
-})
-</script>

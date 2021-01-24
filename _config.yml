@@ -52,11 +52,15 @@ dates:
             web: 2019-11-18
 
 
+introAnimationDuration: 4
+
 # This website URL
 # Used for Sitemap.xml and the RSS feed
 url: https://BHStudios.org
 
 timezone: America/Denver
+
+
 
 
 # Low-level config lines #
