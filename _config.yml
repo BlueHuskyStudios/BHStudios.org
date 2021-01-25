@@ -14,12 +14,14 @@ description: Blue Husky Studios is an indie entertainment brand. We make art, de
 
 brand:
     name: Blue Husky Studios
+    primary-color: "#2196F3"
     social:
         twitter_username: BluHuskyStudios
         previewImage: https://Shared.BHStudios.org/_img/bg/main-thumbnail.png
 
 authors:
     -
+        role: Maintainer
         name: Ben Leggiero
         shortName: Ben
         tagline-html: Developer&emsp;|&emsp;Designer
@@ -52,11 +54,26 @@ dates:
             web: 2019-11-18
 
 
+social:
+    twitter-username: BluHuskyStudios
+
+
 introAnimationDuration: 4
+
+default-theme:
+    color: air
+    brightness: dark
+
+sidebar:
+    headerImage:
+        url: /images/Rainbow%20logo.svg
 
 # This website URL
 # Used for Sitemap.xml and the RSS feed
 url: https://BHStudios.org
+source-code:
+    url: https://github.com/BlueHuskyStudios/BHStudios.org
+
 
 timezone: America/Denver
 
