@@ -1,0 +1,234 @@
+
+<!--
+
+👋🏼 Hey, there! Thanks for checking out the code!
+
+This site was made by Ben Leggiero
+
+If you want to check out the actual source code of this site, it's published at
+https://github.com/BlueHuskyStudios/BHStudios.org
+
+---
+
+This particular piece of this site came from the Neon Jekyll Layouts repo, which is part of a framework for Jekyll
+sites like this! Neon is a theme I (Ben Leggiero) invented, which is heavily inspired by Google's Material Design. I
+tweaked it for my needs, and is written in plain CSS as much as possible.
+
+If you want to browse through all the current source code or see the history, check these out:
+ - Neon Jekyll Basics: https://github.com/BlueHuskyStudios/Neon-Jekyll-Basics
+ - Neon Jekyll Layouts: https://github.com/BlueHuskyStudios/Neon-Jekyll-Layouts
+ - Neon Jekyll Components: https://github.com/BlueHuskyStudios/Neon-Jekyll-Components
+ - Neon: https://github.com/BlueHuskyStudios/stylesheets/tree/master/assets/v2/neon
+
+Since I wrote Neon from scratch, I decided to place it under the BH-1-PS license:
+https://github.com/BlueHuskyStudios/Licenses/blob/master/Licenses/BH-1-PS.txt
+
+Remember that this site might have a different license, so check for that before doing anything that might go against
+it. As for Neon, feel free to take this code and use it for your own stuff! Just make sure you let everyone know I
+wrote the original 😉
+
+-->
+<!DOCTYPE html>
+<html class="brightness-dark brightness-dark full-height-sidebar">
+<head>
+<meta charset="utf-8" />
+<meta content='text/html; charset=utf-8' http-equiv='Content-Type' />
+<meta http-equiv='X-UA-Compatible' content='IE=edge' />
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+<title>Blue Husky Studios</title>
+
+<meta property="og:title"      content="Blue Husky Studios" />
+<meta property="twitter:title" content="Blue Husky Studios" />
+
+
+
+<meta name="description"         content="Blue Husky Studios is an indie entertainment brand. We make art, develop software, and review stuff!">
+<meta property="og:description"  content="Blue Husky Studios is an indie entertainment brand. We make art, develop software, and review stuff!" />
+<meta name="twitter:description" content="Blue Husky Studios is an indie entertainment brand. We make art, develop software, and review stuff!" />
+
+<meta property="og:site_name"                      content="Blue Husky Studios" />
+<meta property="twitter:site"                      content="Blue Husky Studios" />
+
+<meta name="twitter:creator"                       content="@BluHuskyStudios" /><!-- Tell twitter that this was made by  -->
+
+<meta property="og:type"                           content="website" />
+<meta property="og:url"                            content="http://localhost:4000/" />
+<meta name="twitter:card"                          content="summary_large_image" /><!-- Tell twitter that this link can be presented as a large image with a summary -->
+<meta name="msapplication-TileImage"               content="/images/MS-Tile-Image.png" /><!-- When pinned as a tile for Windows' Start, this is the image -->
+<meta property="og:image"                          content="/images/Social-Preview.png" /><!-- Image for sharing on social networks -->
+<meta property="twitter:image"                     content="/images/Social-Preview.png" />
+<meta name="twitter:image:src"                     content="/images/Social-Preview.png" />
+<meta name="msapplication-TileColor"               content="#2196F3" /><!-- When pinned as a tile for Windows' Start, this is the tile's BG color -->
+<meta name="theme-color"                           content="#2196F3"/><!-- Color in Chrome address bar -->
+<meta name="apple-mobile-web-app-status-bar-style" content="#2196F3" /><!-- Color in Safari status bar -->
+
+
+
+
+<link rel="stylesheet" type="text/css" id="flex"                 href="https://stylesheets.bhstudios.org/assets/v2/structure/flex.css" />
+<link rel="stylesheet" type="text/css" id="neon-tables"          href="https://stylesheets.bhstudios.org/assets/v2/neon/neon-tables.css" />
+<link rel="stylesheet" type="text/css" id="stylesheet-print"     href="https://stylesheets.bhstudios.org/assets/v2/basics/print.css" />
+<link rel="stylesheet" type="text/css" id="framework-stylesheet" href="https://stylesheets.bhstudios.org/assets/v2/neon/neon-renderer.css" />
+<link rel="stylesheet" type="text/css" id="theme-stylesheet"     href="https://stylesheets.bhstudios.org/assets/v2/neon/neon-water.css" />
+<link rel="stylesheet" type="text/css" id="material-icons"       href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+<link rel="stylesheet" type="text/css" id="google-fonts"         href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700|Questrial|ZCOOL+QingKe+HuangYou|Oswald:600&amp;subset=chinese-simplified,korean,latin-ext,vietnamese,cyrillic,cyrillic-ext,greek,greek-ext">
+<link rel="stylesheet" type="text/css" id="site-styles"          href="/site.css" />
+<link rel="stylesheet" type="text/css"                           href="/styles/homepage.css" />
+
+
+
+<script src="https://shared.bhstudios.org/_js/jquery-bh-preferred.js">/* jQuery */</script>
+<script src="https://scripts.bhstudios.org/assets/v2/general/js/lib/kotlin.js">/* Kotlin/JS for BHStudios General Script */</script>
+<script src="https://scripts.bhstudios.org/assets/v2/general/js/BHStudios%20General%20Scripts.js">/* BHStudios General Script */</script>
+
+<script>
+if (undefined === window.localStorage["org.bh.theme"]) {
+    window.localStorage["org.bh.theme"] = JSON.stringify({"color":"air","brightness":"dark"})
+}
+</script>
+
+
+<!-- See also the source code at https://github.com/BlueHuskyStudios/BHStudios.org -->
+</head>
+
+<body>
+
+<script>
+$("html").addClass("ready-for-intro-animation")
+</script>
+
+
+<header class="app-bar">
+    <a href="#" class="hidden   flat button show-sidebar-button" onclick="return false;"><i class="material-icons">menu</i></a>
+    <span class="layout-placeholder"></span>
+    <script>
+    $(".show-sidebar-button").removeClass("hidden")
+    </script>
+</header><svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns="http://www.w3.org/2000/svg"
+	xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
+	version="1.1"
+	xmlns:cc="http://creativecommons.org/ns#"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	viewBox="0 0 1080 1080"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+    id="homepage-background"
+    class="has-slide-in-from-bottom-left-animation"
+	>
+	<defs>
+		<linearGradient id="Digital_Blue" osb:paint="solid">
+			<stop stop-color="var(--brand-color-1)" offset="0"></stop>
+		</linearGradient>
+		<linearGradient id="Magical_Purple" osb:paint="solid">
+			<stop stop-color="var(--brand-color-2)" offset="0"></stop>
+		</linearGradient>
+		<linearGradient id="Silly_Magenta" osb:paint="solid">
+			<stop stop-color="var(--brand-color-3)" offset="0"></stop>
+		</linearGradient>
+		<linearGradient id="Not_Green" osb:paint="solid">
+			<stop stop-color="var(--brand-color-4)" offset="0"></stop>
+		</linearGradient>
+		<linearGradient id="Hardly-Working_Orange" osb:paint="solid">
+			<stop stop-color="var(--brand-color-5)" offset="0"></stop>
+		</linearGradient>
+	</defs>
+	<metadata>
+		<rdf:rdf>
+			<cc:work rdf:about="">
+				<dc:format>image/svg+xml</dc:format>
+				<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"></dc:type>
+				<dc:title></dc:title>
+			</cc:work>
+		</rdf:rdf>
+	</metadata>
+	<g transform="translate(-420 27.638)">
+
+		<g fill-rule="evenodd" transform="matrix(.86603 -.5 .5 .86603 -127.43 549.14)">
+			<g>
+				<rect height="90" width="10000" y="332.36" x="-9030" id="Flying_Logo_Stripe_1" fill="url(#Not_Green)"/>
+				<rect height="90" width="10000" y="422.36" x="-9030" id="Flying_Logo_Stripe_2" fill="url(#Magical_Purple)" stroke-width="2" stroke="url(#Magical_Purple)"/>
+				<rect height="90" width="10000" y="512.36" x="-9030" id="Flying_Logo_Stripe_3" fill="url(#Silly_Magenta)"  stroke-width="2" stroke="url(#Silly_Magenta)"/>
+				<rect height="90" width="10000" y="601" x="-9030" id="Flying_Logo_Stripe_4" fill="url(#Hardly-Working_Orange)"></rect>
+			</g>
+		</g>
+		<g transform="matrix(.39290 0 0 .39290 764.32 329.25)">
+			<path d="m878.64 459.93c0 213.28-172.89 386.17-386.17 386.17s-386.17-172.89-386.17-386.17 172.89-386.17 386.17-386.17 386.17 172.89 386.17 386.17z" fill="#222"></path>
+			<g stroke="#222" stroke-width="48" fill="none">
+				<path d="m498.05 900.51c-239.95 0-434.46-194.52-434.46-434.46 0-239.95 194.52-434.46 434.46-434.46 239.95 0 434.46 194.52 434.46 434.46 0 239.95-194.52 434.46-434.46 434.46m-5.0802-134.98c-194.4 0-351.99-157.59-351.99-351.99s157.59-351.99 351.99-351.99 351.99 157.59 351.99 351.99-157.59 351.99-351.99 351.99z"></path>
+				<path d="m501.34 656.42c-38.823 2.5348-61.711 24.4-116.16 23.254-15.545 0.23146-47.064-20.824-49.632-52.094-0.46855-23.474 50.941-77.073 71.457-120.43 11.19-23.648 27.546-80.638 88.329-85.065 61.477-5.2203 78.428 64.971 94.363 84.302 29.889 36.734 73.457 77.178 70.118 104.62-1.5917 17.635-20.125 62.917-60.852 67.436-31.012 4.3753-58.801-24.563-97.625-22.028m118.98-236.21c-11.613 52.339 3.6805 86.097 35.37 94.962 28.725 8.0363 59.787-17.094 71.376-56.846 15.549-53.34-14.158-111.7-39.465-116.89-27.754-6.4214-55.948 28.815-67.281 78.769m-118.4-131.35c-12.349 61.338-2.4113 98.974 38.775 111.54 30.89 6.2814 72.077-14.657 80.314-52.345 12.356-56.532-38.656-114.36-64.83-120.99-24.736-6.2706-46.421 22.866-54.26 61.799m-86.42 114.46c24.665 6.5597 52.343-10.38 59.505-39.584 15.754-60.504-18.457-130.29-44.702-136.64-23.656-5.6898-65.128 33.859-76.402 79.835-10.837 47.929 25.354 85.974 61.599 96.39m-112.04 123.01c27.4 7.8672 60.259-6.5305 68.126-39.856 11.07-42.649-34.5-114.71-65.848-121.42-20.563-4.5986-38.825 13.807-45.763 41.102-14.981 59.594-0.0968 107.29 43.485 120.18m378.4-206.3c7.9826 2.3308 25.012 2.6549 26.993-6.6709 2.4148-8.6017-7.8858-38.854-14.352-38.651-7.1827 0.63618-30.549 39.861-12.642 45.322m-143.31-124.48c5.2013 8.6896 30.075 13.152 34.716 4.1936 6.4966-12.788-4.2724-38.918-14.426-39.591-10.589-0.7021-25.708 26.346-20.29 35.398m-140.31 4.0523c8.2743 3.6331 24.487-3.9277 29.987-13.897 5.8544-11.415-13.91-35.468-25.746-29.561-10.331 4.7523-15.538 38.445-4.2415 43.459m-141.27 150c7.3445 4.9332 26.784-4.574 28.12-13.756 1.9025-11.496-23.366-26.808-27.668-24.213-4.661 2.8111-9.3089 31.731-0.45139 37.97z"></path>
+			</g>
+			<g fill="#fff" fill-rule="evenodd">
+				<path d="m498.05 900.51c-239.95 0-434.46-194.52-434.46-434.46 0-239.95 194.52-434.46 434.46-434.46 239.95 0 434.46 194.52 434.46 434.46 0 239.95-194.52 434.46-434.46 434.46m-5.0802-134.98c-194.4 0-351.99-157.59-351.99-351.99s157.59-351.99 351.99-351.99 351.99 157.59 351.99 351.99-157.59 351.99-351.99 351.99z"></path>
+				<path d="m501.34 656.42c-38.823 2.5348-61.711 24.4-116.16 23.254-15.545 0.23146-47.064-20.824-49.632-52.094-0.46855-23.474 50.941-77.073 71.457-120.43 11.19-23.648 27.546-80.638 88.329-85.065 61.477-5.2203 78.428 64.971 94.363 84.302 29.889 36.734 73.457 77.178 70.118 104.62-1.5917 17.635-20.125 62.917-60.852 67.436-31.012 4.3753-58.801-24.563-97.625-22.028m118.98-236.21c-11.613 52.339 3.6805 86.097 35.37 94.962 28.725 8.0363 59.787-17.094 71.376-56.846 15.549-53.34-14.158-111.7-39.465-116.89-27.754-6.4214-55.948 28.815-67.281 78.769m-118.4-131.35c-12.349 61.338-2.4113 98.974 38.775 111.54 30.89 6.2814 72.077-14.657 80.314-52.345 12.356-56.532-38.656-114.36-64.83-120.99-24.736-6.2706-46.421 22.866-54.26 61.799m-86.42 114.46c24.665 6.5597 52.343-10.38 59.505-39.584 15.754-60.504-18.457-130.29-44.702-136.64-23.656-5.6898-65.128 33.859-76.402 79.835-10.837 47.929 25.354 85.974 61.599 96.39m-112.04 123.01c27.4 7.8672 60.259-6.5305 68.126-39.856 11.07-42.649-34.5-114.71-65.848-121.42-20.563-4.5986-38.825 13.807-45.763 41.102-14.981 59.594-0.0968 107.29 43.485 120.18m378.4-206.3c7.9826 2.3308 25.012 2.6549 26.993-6.6709 2.4148-8.6017-7.8858-38.854-14.352-38.651-7.1827 0.63618-30.549 39.861-12.642 45.322m-143.31-124.48c5.2013 8.6896 30.075 13.152 34.716 4.1936 6.4966-12.788-4.2724-38.918-14.426-39.591-10.589-0.7021-25.708 26.346-20.29 35.398m-140.31 4.0523c8.2743 3.6331 24.487-3.9277 29.987-13.897 5.8544-11.415-13.91-35.468-25.746-29.561-10.331 4.7523-15.538 38.445-4.2415 43.459m-141.27 150c7.3445 4.9332 26.784-4.574 28.12-13.756 1.9025-11.496-23.366-26.808-27.668-24.213-4.661 2.8111-9.3089 31.731-0.45139 37.97z"></path>
+			</g>
+		</g>
+	</g>
+</svg>
+
+<article class="full-viewport-size   flex-column flex-vert-space-around flex-horiz-center">
+	<h1 id="brand-name" class="has-shadow-intro-animation">Blue Husky Studios</h1>
+	<ul id="portal-list" class="plain   flex-row flex-horiz-center flex-wrap   font-2x">
+		<li><a href="//Meta.BHStudios.org"          id="aboutButton"    class="big button display-inline-block">About</a></li>
+		<li><a href="//Software.BHStudios.org"      id="softwareButton" class="big button display-inline-block">Software</a></li>
+		<li><a href="//Research.BHStudios.org"      id="researchButton" class="big button display-inline-block">Research</a></li>
+		<li><a href="//Meta.BHStudios.org/contact/" id="contactButton"  class="big button display-inline-block">Contact</a></li>
+	</ul>
+</article>
+
+
+
+
+
+
+<script>
+$(_ => {
+	const readyForIntroElements = $(".ready-for-intro-animation")
+    readyForIntroElements.addClass("go-for-intro-animation")
+    setTimeout(() => {
+        readyForIntroElements
+            .removeClass("go-for-intro-animation")
+            .addClass("intro-animation-complete")
+    }, 4 * 1000)
+})
+</script>
+
+
+
+
+<footer class="centered  widest-desktop-small">
+    <section class="show-print text-centered">
+        http://localhost:4000/
+    </section>
+
+    <aside class="text-center">
+
+    </aside>
+</footer>
+
+
+
+
+<nav class="sidebar   flex-column flex-vert-space-between">
+    <section>
+        <header>
+            <figure><img src="/images/Rainbow%20logo.svg" class=""/></figure>
+        </header>
+    </section>
+
+    <section>
+        <ul class="theme-color-selection-list">
+            <li><a href="#Brightness-Dark"  onclick="return false" title="Dark"  class="color-swatch" theme-swatch-type="brightness" theme-swatch-value="dark" >Dark</a></li>
+            <li><a href="#Brightness-Light" onclick="return false" title="Light" class="color-swatch" theme-swatch-type="brightness" theme-swatch-value="light">Light</a></li>
+        </ul>
+        <ul class="theme-color-selection-list">
+            <li><a href="#Theme-Water" onclick="return false" title="Water" class="color-swatch" theme-swatch-type="color" theme-swatch-value="water">Water</a></li>
+            <li><a href="#Theme-Earth" onclick="return false" title="Earth" class="color-swatch" theme-swatch-type="color" theme-swatch-value="earth">Earth</a></li>
+            <li><a href="#Theme-Fire"  onclick="return false" title="Fire"  class="color-swatch" theme-swatch-type="color" theme-swatch-value="fire" >Fire</a></li>
+            <li><a href="#Theme-Air"   onclick="return false" title="Air"   class="color-swatch" theme-swatch-type="color" theme-swatch-value="air"  >Air</a></li>
+       <!-- <li><a href="#Theme-Magic" onclick="return false" title="Magic" class="color-swatch" theme-swatch-type="color" theme-swatch-value="magic">Magic</a></li> -->
+        </ul>
+    </section>
+</nav>
+
+</body>
+</html>

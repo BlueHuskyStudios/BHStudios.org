@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+{%- assign app-bar-title = page.app-bar-title | default: site.name -%}
+{%- include Neon-Jekyll-Components/App-Bar/app-bar.html
+    title=app-bar-title
+%}
+
+
+
+<main class="page">
+{{ content }}
+</main>

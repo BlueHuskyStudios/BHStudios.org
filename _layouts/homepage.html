@@ -1,6 +1,12 @@
 ---
 layout: default
 ---
+
+<script>
+$("html").addClass("ready-for-intro-animation")
+</script>
+
+
 <header class="app-bar">
     <a href="#" class="hidden   flat button show-sidebar-button" onclick="return false;"><i class="material-icons">menu</i></a>
     <span class="layout-placeholder"></span>
@@ -15,7 +21,7 @@ layout: default
 {%- for svg in svgs -%}
 {{ svg.content }}
 {%- endfor -%}
-{{ site.pages.homepage-backgorund.content }}
+{{ site.pages.homepage-background.content }}
 {{ content }}
 
 
